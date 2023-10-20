@@ -1,0 +1,170 @@
+[
+ {
+   "name": "John Doe",
+   "rate": "Hourly rate - #3000",
+   "avalableTime": "10 hours a week",
+   "job": "Plumbing",
+   "jobCategories": "building maintance",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "beginner"
+  },
+  {
+   "name": "Mattew Benson",
+   "rate": "Hourly rate - #5000",
+   "avalableTime": "18 hours a week",
+   "job": "Painting",
+   "jobCategories": "building maintance",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "beginner"
+ },
+  {
+   "name": "Pelumi Benson",
+   "rate": "Hourly rate - #4500",
+   "avalableTime": "8 hours a week",
+   "jobCategories": "building maintance",
+   "job": "carpenter",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+  "level": "beginner"
+ },
+
+  {
+   "name": "Sola Aderemi",
+   "rate": "Hourly rate - #3500",
+   "avalableTime": "7 hours a week",
+   "jobCategories": "building maintance",
+   "job": "Plumbing",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "intermediate"
+  },
+  {
+   "name": "olabisi adeyemi",
+   "rate": "Hourly rate - #5500",
+   "jobCategories": "building maintance",
+   "avalableTime": "10 hours a week",
+   "job": "Painting",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "intermediate"
+ },
+  {
+   "name": "Pelumi Benson",
+   "rate": "Hourly rate - #5000",
+   "jobCategories": "building maintance",
+   "avalableTime": "13 hours a week",
+   "job": "carpenter",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "intermediate"
+ },
+
+   {
+   "name": "lekan ogunola",
+   "rate": "Hourly rate - #6500",
+   "jobCategories": "building maintance",
+   "avalableTime": "7 hours a week",
+   "job": "Plumbing",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+  },
+  {
+   "name": "olabisi adeyemi",
+   "rate": "Hourly rate - #7500",
+   "jobCategories": "building maintance",
+   "avalableTime": "10 hours a week",
+   "job": "Painting",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+ },
+  {
+   "name": "Pelumi Benson",
+   "rate": "Hourly rate - #6000",
+   "jobCategories": "building maintance",
+   "avalableTime": "13 hours a week",
+   "job": "carpenter",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+ },
+
+
+ {
+   "name": "dolapo adeola",
+   "rate": "Hourly rate - #6000",
+   "jobCategories": "outdoors service",
+   "avalableTime": "8 hours a week",
+   "job": "Gardening",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+  "level": "beginner"
+  },
+  {
+   "name": "bola sodiq",
+   "rate": "Hourly rate - #9500",
+   "avalableTime": "5 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "massonry",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+  "level": "beginner"
+ },
+  {
+   "name": "daniel Benson",
+   "rate": "Hourly rate - #76000",
+   "avalableTime": "10 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "surveying",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "beginner"
+ },
+
+  {
+   "name": "oke Micheal",
+   "rate": "Hourly rate - #6000",
+   "avalableTime": "4 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "Gardening",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level":"intermediate"
+  },
+  {
+   "name": "Goodness blessings",
+   "rate": "Hourly rate - #9500",
+   "avalableTime": "7 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "massonry",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level":"intermediate"
+ },
+  {
+   "name": "funmilayo gbadebo",
+   "rate": "Hourly rate - #76000",
+   "avalableTime": "6 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "surveying",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "intermediate"
+ },
+
+  {
+   "name": "odegenro deji",
+   "rate": "Hourly rate - #6000",
+   "avalableTime": "7 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "Gardening",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+  },
+  {
+   "name": "kolapo grace",
+   "rate": "Hourly rate - #9500",
+   "avalableTime": "9 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "massonry",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+ },
+  {
+   "name": "fagbesan bimbo",
+   "rate": "Hourly rate - #76000",
+   "avalableTime": "6 hours a week",
+   "jobCategories": "outdoors service",
+   "job": "surveying",
+   "job Description": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert"
+ }
+]

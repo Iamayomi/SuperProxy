@@ -1,0 +1,52 @@
+[ {
+    "firstName": "Ajao",
+    "lastName": "Sunday",
+    "phoneNumber": "09134802182",
+    "city": "Abekunta",
+    "gender": "Male",
+    "state": "Ogun",
+    "country": "Nigeria",
+    "code": 4567890
+  },
+ {
+    "firstName": "Qudus",
+    "lastName": "Abdulahi",
+    "phoneNumber": "08108627182",
+    "city": "Ilorin",
+    "gender": "Female",
+    "state": "Kuara",
+    "country": "Nigeria",
+      "code": 1111854
+  },
+ {
+    "firstName": "Azeez",
+    "lastName": "Badejo",
+    "phoneNumber": "07034222028",
+    "city": "Ikeja",
+    "gender": "Male",
+    "state": "Lagos",
+    "country": "Nigeria",
+      "code": 9463572
+  },
+ {
+    "firstName": "olalere",
+    "lastName": "mary",
+    "phoneNumber": "09036445677",
+    "city": "Ilorin",
+    "gender": "Female",
+    "state": "kogi",
+    "country": "Nigeria",
+      "code": 1346360
+  },
+ {
+    "firstName": "lekan",
+    "lastName": "Abdulahi",
+    "phoneNumber": "08035724182",
+    "city": "Ibadan",
+    "gender": "Male",
+    "state": "Oyo",
+    "country": "Nigeria",
+      "code": 9554776
+  }
+ 
+]
