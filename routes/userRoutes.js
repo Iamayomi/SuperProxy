@@ -1,45 +1,35 @@
 const express = require('express');
-const googleController = require('../controllers/google-auth');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
-
+const notifyController = require('../controllers/notifyController');
+const chatController = require('../controllers/chatController');
 
 const router = express.Router();
 
 
-
 router.route('/signingup').post(authController.signup);
 router.route('/signingin').post(authController.signin);
+
 router.use(authController.protect);
 
-router.route('/updateProfile').patch(userController.uploadUserPhoto, userController.updateMe);
+router.route('/updateProfile').patch(userController.updateMe);
 
 router.route('/verifyId').post(authController.verifyId);
 
-router.route('/verifyPhone').post(authController.verifyPhone);
+router.route('/:userId/sendNotification').post(notifyController.sendAUserNotify);
 
-router.route('/verifyPhoneOTP').patch(authController.verifyPhoneOTP);
+router.route('/:userId/chatting').post(chatController.sendMessage);
 
+router.route('/getAllUser').get(userController.getAllUser);
 
+router.route('/profile').get(userController.getAUser);
 
+//router.route('/verifyPhone').post(authController.verifyPhone);
+//
+router.route('/qualification').post(userController.qualifyUser);
+//
+//router.route('/verifyPhoneOTP/:id').patch(authController.verifyPhoneOTP);
 
-router
-    .route('/google')
-    .get(googleController.google);
-
-router
-    .route('/google/callback')
-    .get(googleController.callback);
-
-
-router
-    .route('/failed')
-    .get(googleController.failed);
-
-
-router
-    .route('/success')
-    .get(googleController.isLoggedIn, googleController.success);
 
 
 module.exports = router;

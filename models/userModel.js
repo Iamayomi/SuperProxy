@@ -30,13 +30,12 @@ const userSchema = new mongoose.Schema({
 
   budget: {
     type: String,
-    required: true
   },
 
   job: {
     type: String,
-    required: true
   },
+
   skills: {
     type: Array
   },
@@ -50,27 +49,6 @@ const userSchema = new mongoose.Schema({
   workingRate: {
     type: String
   },
-  qualification: {
-    institution: {
-      type: String,
-      required: true
-    },
-    admissionYear: {
-      type: String
-    },
-    graduateYear: {
-      type: String
-    },
-    Degree: {
-      type: String
-    },
-    areaOfStudy: {
-      type: String
-    },
-    Description: {
-      type: String
-    },
-  },
 
   role: {
     type: String,
@@ -79,8 +57,6 @@ const userSchema = new mongoose.Schema({
   },
 
   photo: String,
-
-  phoneNumber: Number,
 
   bio: String,
 
@@ -116,14 +92,37 @@ const userSchema = new mongoose.Schema({
     }
   },
 
+
   passwordChangedAt: {
     type: Date,
     default: Date.now(),
     select: false
   },
 
+
+},
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  });
+
+userSchema.virtual('notifications', {
+  ref: 'notifications',
+  foreignField: 'user',
+  localField: '_id'
 });
 
+userSchema.virtual('phoneNumber', {
+  ref: 'phone',
+  foreignField: 'user',
+  localField: '_id'
+});
+
+userSchema.virtual('qualification', {
+  ref: 'qualification',
+  foreignField: 'user',
+  localField: '_id'
+});
 
 userSchema.pre('save', async function (next) {
   if (!this.isModified('password')) return next();

@@ -64,10 +64,22 @@ const findJobSchema = new mongoose.Schema({
     default: Date.now()
   }
 
+},
+  {
+    toJSON: { virtuals: true },
+    toObject: { virtuals: true },
+  });
+
+findJobSchema.virtual('notifications', {
+  ref: 'notifications',
+  foreignField: 'user',
+  localField: '_id'
 });
 
-//findJobs.pre('save', async function(next){
-//    if(userModel.email) next();
-//});
+findJobSchema.virtual('chat', {
+  ref: 'chat',
+  foreignField: 'user',
+  localField: '_id'
+});
 
 module.exports = mongoose.model('findJob', findJobSchema);

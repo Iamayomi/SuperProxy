@@ -18,7 +18,7 @@ exports.getAllJobs = async function (req, res, next) {
       .fields()
       .pagination();
 
-    const jobs = await properties.query;
+    const jobs = await properties.query.populate('notifications chat');
 
     res.cookie('jwt', cookiesOptions);
 

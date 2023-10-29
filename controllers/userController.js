@@ -1,4 +1,5 @@
 const User = require('../models/userModel');
+const qualify = require('../models/qualiModel');
 const multer = require('multer');
 
 
@@ -30,49 +31,97 @@ const upload = multer({
 
 exports.uploadUserPhoto = upload.single('photo');
 
-//const filterObj = (obj, ...allowedField) => {
-//  const newObj = {};
-//  Object.keys(obj).forEach(el => {
-//    if (allowedField.includes(el)) newObj[el] = obj[el];
-//  });
-//  return newObj;
-//};
-
-const fitrObj = (obj, val) => {
+const filterObj = (userObj, ...fields) => {
   const newObj = {};
-   Object.keys(obj).forEach(el => { newObj[el] = obj[el];  
-   });
-  return newObj;
+    Object.keys(userObj).forEach(el => {
+        if(fields.includes(el)) newObj[el] = userObj[el];
+    });
+    console.log(newObj);
+    return newObj;
 };
+
 
 exports.updateMe = async function (req, res, next) {
 
-//const filterBody = filterObj(req.body, "firstName", "lastName", "gender", "photo", "budget", "bio", "skills", "language", "totalEarned", "workingRate", "address", "website", "job");
+const filterBody = filterObj(req.body, 'firstName', 'lastName', "email");
+
+
+const updateUser = await User.findByIdAndUpdate(req.user.id, filterBody, {
+     new: true,
+     runValidators: true
+ });
     
-const fitrBody = fitrObj(req.body, req.user);
+  res.status(200).json({
+      status: "success",
+      data : {
+          user: updateUser
+      }
+  })
+    next();
+};
 
-const updateUser = await User.findByIdAndUpdate(req.user.id, fitrBody, {
-    new: true,
-    runValidators: true
-});
-
-res.status(200).json({
-    status: "success",
-    data: {
-        user: updateUser
+exports.getAUser = async function(req, res, next){
+    try{
+//        if (!req.body.id) req.body.id = req.params.id;
+        
+    const getProfile = await User.findById(req.user.id).populate('phoneNumber notifications qualification');
+    
+    res.status(200).json({
+        status: "success",
+        data: {
+            getProfile
+        }
+    });
+        
+    }catch(error){
+       next(res.status(400).send(error.message));
     }
-})
-    
+   next();
 };
 
 
+exports.getAllUser = async function(req, res, next){
+    try{
+    const getProfile = await User.find();
+    
+    res.status(200).json({
+        status: "success",
+        data: {
+            getProfile
+        }
+    });
+        
+    }catch(error){
+        res.status(400).send(error.message);
+    }
+};
 
 
+exports.qualifyUser = async function(req, res, next){
+  try{
+      if (!req.body.id) req.body.id = req.user.id;
+      const qualifyUser = await qualify.create({
+          institution: req.body.institution,
+          admissionYear: req.body.admissionYear,
+          graduateYear: req.body.graduateYear,
+          degree: req.body.degree,
+          areaOfStudy: req.body.areaOfStudy,
+          description: req.body.description,
+          user: req.body.id
+      });
+      
+       res.status(200).json({
+        status: "success",
+        data: {
+            qualifications: qualifyUser
+        }
+    });
+      
+  }  catch(error){
+     res.status(400).send(error.message);
 
-
-
-
-
+  }
+};
 
 
 

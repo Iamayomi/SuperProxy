@@ -5,23 +5,23 @@ const verifyId = require('./models/verifyIdModel');
 const connectDB = require('./db');
 require('dotenv').config({ path: './config.env' });
 
-
-const port = process.env.PORT || 8000;
 connectDB;
 
+
+const port = process.env.PORT || 8000;
+
 app.listen(port, () => {
-	console.log(`App running on port ${port} ✈🛬✈`);
+	console.log(`Server is connected at port ${port}`);
 });
 
 
 const recommended = JSON.parse(
-	fs.readFileSync(`${__dirname}/dev-data/userIdCard.json`, 'utf-8')
+	fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8')
 );
-
 
 const importData = async () => {
 	try {
-		await verifyId.create(recommended, { validateBeforeSave: false });
+		await findJobs.create(recommended, { validateBeforeSave: false });
 		console.log('Data successfully loaded!');
 	} catch (err) {
 		console.log(err.message);
@@ -31,7 +31,7 @@ const importData = async () => {
 
 const deleteData = async () => {
 	try {
-		await verifyId.deleteMany();
+		await findJobs.deleteMany();
 		console.log('Data successfully deleted!');
 	} catch (err) {
 		console.log(err.message);

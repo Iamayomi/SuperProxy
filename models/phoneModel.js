@@ -7,7 +7,13 @@ const phoneSchema = new mongoose.Schema({
         required: true
     },
 
-    phoneOPT: String
+    phoneOPT: String,
+
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        //        required: [true, "notification must belong to a user"]
+    }
 });
 
 

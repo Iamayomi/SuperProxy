@@ -23,6 +23,7 @@ exports.signup = async function (req, res, next) {
             lastName: req.body.lastName,
             email: req.body.email,
             state: req.body.state,
+            gender: req.body.gender,
             location: req.body.location,
             role: req.body.role,
             lookingFor: req.body.lookingFor,
@@ -141,9 +142,7 @@ exports.restrict = function (...role) {
 };
 
 
-
 exports.verifyId = async function (req, res, next) {
-
     const userIds = await verifyId.findOne(req.body);
     if (!userIds) {
         return next(res.status(400).send('invalid code'));
@@ -172,17 +171,19 @@ exports.verifyPhone = async function (req, res, next) {
 };
 
 exports.verifyPhoneOTP = async function (req, res, next) {
-    const { Otp, phoneId } = req.body;
 
-    const user = await phoneVerify.findById(phoneId);
+    if (!req.body.user) req.body.phoneId = req.params.userId;
+    const { otp } = req.body;
+
+    const user = await User.findById(req.body.phoneId);
 
     if (!user) {
         return next(res.status(400).send('phone number Not found'));
     };
-
-    if (user.phoneOPT !== Otp) {
-        return next(res.status(400).send('incorrect OTP'));
-    };
+//
+//    if (user.phoneOPT !== Otp) {
+//        return next(res.status(400).send('incorrect OTP'));
+//    };
 
     next(res.status(200).send('Phone Number verify Successfully'));
 };
