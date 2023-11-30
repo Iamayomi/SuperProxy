@@ -1,37 +1,49 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 
-const notifySchema = new mongoose.Schema({
-    text: {
-        type: String
-    },
-    time: {
-        type: Date,
-        default: Date.now()
-    },
 
+const notificationSchema = new mongoose.Schema({
+    
     user: {
         type: mongoose.Schema.ObjectId,
         ref: 'User',
-        required: [true, "notification must belong to a user"]
-    }
-
+        required: true
+    },
+    
+    projectName: String,
+    
+    category: String,
+    
+    DescribeService: String,
+    
+    Duration: String,
+    
+    Budget: String,
+    
+    file: String
+                                          
 },
-    {
-        toJSON: { virtuals: true },
-        toObject: { virtuals: true },
-    }
-
+{
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true },
+}
 );
 
-notifySchema.pre(/^find/, function (next) {
+notificationSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'user',
-        select: 'firstName lastName photo'
+        select: 'fullName photo'
     });
 
     next();
-
 });
-
-
-module.exports = mongoose.model('notifications', notifySchema);
+                   
+module.exports = mongoose.model('notification', notificationSchema);
+    
+    
+    
+    
+    
+    
+    
+    
+    

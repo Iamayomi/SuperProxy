@@ -1,0 +1,74 @@
+[ 
+	 {
+   "name": "odegenro deji",
+   "timeRate": "Hourly",
+   "price": 32,
+   "duration": "7 hours a Days",
+   "jobCategories": "outdoors service",
+   "jobName": "Gardening",
+   "jobDescription": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert",
+   "rating": 3,
+   "startLocation": {
+      "description": "Utah, USA",
+      "type": "Point",
+      "coordinates": [-109.55099, 37.283469],
+      "address": "Bluff, UT 84512, USA"
+   },
+   "locations": {
+       "_id": "5c88fa8cf4afda39709c2973",
+        "description": "Natural Bridges National Monument",
+        "type": "Point",
+        "coordinates": [-109.99953, 37.629017]
+    }
+  },
+    
+  {
+   "name": "kolapo grace",
+   "timeRate": "Fixed",      
+   "price": 22,
+   "duration": "9 hours a Days",
+   "jobCategories": "outdoors service",
+   "jobName": "massonry",
+   "jobDescription": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert",
+   "rating": 5,
+   "startLocation": {
+        "description": "Aspen, USA",
+      "type": "Point",
+      "coordinates": [-106.822318, 39.190872],
+      "address": "419 S Mill St, Aspen, CO 81611, USA"
+   },
+   "locations": {
+        "_id": "5c88fa8cf4afda39709c295b",
+        "description": "Beaver Creek",
+        "type": "Point",
+        "coordinates": [-106.516623, 39.60499]
+   }
+ },
+    
+  {
+   "name": "fagbesan bimbo",
+   "timeRate": "Hourly",
+   "price": 32,
+   "duration": "6 hours a weeks",
+   "jobCategories": "building maintenance",
+   "jobName": "carpentry",
+   "jobDescription": "I am lookng for a Co-Founder to join me visualize an idea to fruition. The Macro idea is an Platform BYOB whivh stands for BeYourOwnBoss",
+   "level": "expert",
+   "rating": 2,
+   "startLocation": {
+        "description": "California, USA",
+      "type": "Point",
+      "coordinates": [-122.29286, 38.294065],
+      "address": "560 Jefferson St, Napa, CA 94559, USA"
+   },
+   "locations": {
+        "_id": "5c88fa8cf4afda39709c296d",
+        "description": "Raymond Vineyard and Cellar",
+        "type": "Point",
+        "coordinates": [-122.434697, 38.482181]
+    }
+  }  
+
+]

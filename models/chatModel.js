@@ -1,6 +1,12 @@
 const mongoose = require("mongoose");
 
 const chatSchema = new mongoose.Schema({
+    user: {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+        required: [true, "notification must belong to a user"]
+    },
+    
     text: {
         type: String
     },
@@ -9,13 +15,7 @@ const chatSchema = new mongoose.Schema({
         default: Date.now()
     },
 
-    user: {
-        type: mongoose.Schema.ObjectId,
-        ref: 'User',
-        required: [true, "notification must belong to a user"]
-    }
-
-},
+   },
     {
         toJSON: { virtuals: true },
         toObject: { virtuals: true },
@@ -26,7 +26,7 @@ const chatSchema = new mongoose.Schema({
 chatSchema.pre(/^find/, function (next) {
     this.populate({
         path: 'user',
-        select: 'firstName lastName photo'
+        select: 'fullName photo'
     });
 
     next();

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const app = require('./app');
-const findJobs = require('./models/findJobModel');
+const Job = require('./models/jobModel');
 const verifyId = require('./models/verifyIdModel');
 const connectDB = require('./db');
 require('dotenv').config({ path: './config.env' });
@@ -15,13 +15,12 @@ app.listen(port, () => {
 });
 
 
-const recommended = JSON.parse(
-	fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8')
-);
+const recommended = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/jobs.json`, 'utf-8'));
+
 
 const importData = async () => {
 	try {
-		await findJobs.create(recommended, { validateBeforeSave: false });
+		await Job.create(recommended, { validateBeforeSave: false } );
 		console.log('Data successfully loaded!');
 	} catch (err) {
 		console.log(err.message);
@@ -31,7 +30,7 @@ const importData = async () => {
 
 const deleteData = async () => {
 	try {
-		await findJobs.deleteMany();
+		await Job.deleteMany();
 		console.log('Data successfully deleted!');
 	} catch (err) {
 		console.log(err.message);
@@ -44,4 +43,4 @@ if (process.argv[2] === '--import') {
 	importData();
 } else if (process.argv[2] === '--delete') {
 	deleteData();
-}
+};
